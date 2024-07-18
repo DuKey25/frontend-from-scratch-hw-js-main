@@ -5,6 +5,6 @@
 let sum;
 let n = 1;
 while (n < 20) {
-    n += 1
-    sum += n
+        sum += n
+        n += 1
     };
