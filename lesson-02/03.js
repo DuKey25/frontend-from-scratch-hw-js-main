@@ -11,7 +11,7 @@ let grade = (score < 50) ? 'F' :
 (score < 90) ? 'B' :
 (score <= 100) ? 'A' : 'Please enter correctly score'
 
-console.log(grade);
+// console.log(grade);
 
 if (score >= 0 && score <= 49) {
     grade = 'F'
@@ -31,7 +31,7 @@ else if (score >= 90 && score <= 100) {
     console.log('Please enter correctly score');
 }
 
-console.log(`Grade ${grade}`);
+// console.log(`Grade ${grade}`);
 
 
 
