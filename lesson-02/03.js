@@ -4,27 +4,37 @@
  * Результат сохраните в переменной grade.
  */
 
-const score = 100// тестовое значение, можно изменять
-let grade
+const score = 75// тестовое значение, можно изменять
+let grade = (score < 50) ? 'F' :
+(score < 70) ? 'D' :
+(score < 80) ? 'C' :
+(score < 90) ? 'B' :
+(score <= 100) ? 'A' : 'Please enter correctly score'
+
+console.log(grade);
+
 if (score >= 0 && score <= 49) {
     grade = 'F'
 }
-if (score >= 50 && score <= 69) {
+else if (score >= 50 && score <= 69) {
     grade = 'D'
 }
-if (score >= 70 && score <= 79) {
+else if (score >= 70 && score <= 79) {
     grade = 'C'
 }
-if (score >= 80 && score <= 89) {
+else if (score >= 80 && score <= 89) {
     grade = 'B'
 }
-if (score >= 90 && score <= 100) {
+else if (score >= 90 && score <= 100) {
     grade = 'A'
 } else {
     console.log('Please enter correctly score');
 }
 
 console.log(`Grade ${grade}`);
+
+
+
 
 
 // your code
