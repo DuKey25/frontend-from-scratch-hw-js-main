@@ -17,8 +17,12 @@
 
 function findUniqueElements(array) {
     const newArray = []
-    if (!includesElement(newArray, array[i])) {
-        newArray.push(array[i])
+    for (let i = 0; i < array.length; i++) {
+        let index = array[i]
+
+        if (!includesElement(newArray, index)) {
+            newArray.push(index)
+        }
     }
     return newArray
 }
