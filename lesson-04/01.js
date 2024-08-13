@@ -17,7 +17,7 @@ function includesElement(array, element) {
     let boolean = false
     for (let i = 0; i < array.length; i++) {
         if (array[i] === element)
- boolean = true
+            boolean = true
     }
     return boolean
 }
