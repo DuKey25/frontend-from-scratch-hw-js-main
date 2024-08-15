@@ -21,10 +21,13 @@ function findCommonElements(array1, array2) {
     const togetherElement = []
 
     for (let i = 0; i < array1.length; i++) {
-        if (includesElement(array1, array2[i])) {
-            togetherElement.push(array2[i])
+        for (let j = 0; j < array2.length; j++) {
+            if (array1[i] === array2[j]) {
+                if (!includesElement(togetherElement, array1[i])) {
+                    togetherElement.push(array1[i])
+                }
+            }
         }
-
     }
-    return togetherElement
+return togetherElement
 }
