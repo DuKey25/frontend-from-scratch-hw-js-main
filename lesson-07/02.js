@@ -4,6 +4,11 @@
  */
 
 function isNumeric(str) {
+  if (str == +str && str !== " ") {
+    return true
+  } else {
+    return false
+  }
   // your code
 }
 
