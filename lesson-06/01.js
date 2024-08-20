@@ -22,36 +22,61 @@ const prevButton = document.querySelector('#prev-button')
 const nextButton = document.querySelector('#next-button')
 
 
+const img = document.querySelector('#web-tech-image')
 
-
+let i = 0;
 
 prevButton.addEventListener('click', function () {
-  const img = document.querySelector('#web-tech-image')
-  for (let i = 0; i < WEB_TECH_IMAGES.length; i++) {
-    if (img.src === WEB_TECH_IMAGES[i]) {
-      if (i === 0) {
-        img.src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - 1]
-        break
-      } else {
-        img.src = WEB_TECH_IMAGES[i - 1]
-        break
-      }
-    }
+  if (i === 0) {
+    i = WEB_TECH_IMAGES.length - 1
+  } else {
+    i -= 1
   }
+  img.src = WEB_TECH_IMAGES[i]
 })
-
 
 nextButton.addEventListener('click', function () {
-  const img = document.querySelector('#web-tech-image')
-  for (let i = 0; i < WEB_TECH_IMAGES.length; i++) {
-    if (img.src === WEB_TECH_IMAGES[i]) {
-      if (i === WEB_TECH_IMAGES.length - 1) {
-        img.src = WEB_TECH_IMAGES[0]
-        break
-      } else {
-        img.src = WEB_TECH_IMAGES[i + 1]
-        break
-      }
-    }
+  if (i === WEB_TECH_IMAGES.length - 1) {
+    i = 0
+  } else {
+    i += 1
   }
+  img.src = WEB_TECH_IMAGES[i]
 })
+
+
+
+
+
+
+
+// prevButton.addEventListener('click', function () {
+//   const img = document.querySelector('#web-tech-image')
+//   for (let i = 0; i < WEB_TECH_IMAGES.length; i++) {
+//     if (img.src === WEB_TECH_IMAGES[i]) {
+//       if (i === 0) {
+//         img.src = WEB_TECH_IMAGES[WEB_TECH_IMAGES.length - 1]
+//         break
+//       } else {
+//         img.src = WEB_TECH_IMAGES[i - 1]
+//         break
+//       }
+//     }
+//   }
+// })
+
+
+// nextButton.addEventListener('click', function () {
+//   const img = document.querySelector('#web-tech-image')
+//   for (let i = 0; i < WEB_TECH_IMAGES.length; i++) {
+//     if (img.src === WEB_TECH_IMAGES[i]) {
+//       if (i === WEB_TECH_IMAGES.length - 1) {
+//         img.src = WEB_TECH_IMAGES[0]
+//         break
+//       } else {
+//         img.src = WEB_TECH_IMAGES[i + 1]
+//         break
+//       }
+//     }
+//   }
+// })
