@@ -34,10 +34,27 @@ let timerId
 
 startButton.addEventListener('click', () => {
   let counter = 3
+clearInterval(timerId)
+  countdownDisplay.textContent = counter
+timerId=setInterval(() => {
+  counter--
+    countdownDisplay.textContent = counter
+    if (counter == 0){
+      clearInterval(timerId)
+      countdownDisplay.textContent = '🚀'
+      timerId = null
+    }
+}, 1000);
 
   // your code
 })
 
 cancelButton.addEventListener('click', () => {
+  if (timerId){
+    clearInterval(timerId)
+    countdownDisplay.textContent = 'Отменено'
+  
+  }
+  
   // your code
 })
