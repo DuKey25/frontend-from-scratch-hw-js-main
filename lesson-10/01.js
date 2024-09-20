@@ -110,7 +110,7 @@ const controller = {
 
   deleteMovie(deleteMovieId) {
     model.deleteMovie(deleteMovieId)
-    view.displayMessage('Фильм успешно удалён')
+    view.displayMessage('Фильм успешно удалён!')
   }
 }
 
